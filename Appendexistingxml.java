@@ -83,6 +83,26 @@ System.out.println(ex);
 	 }
 }
 //logic for call
+	if(filecount >=limit)//check whether need of new folder or not
+		{
+			source = f.createfolder(root, subfolderc,str);
+			System.out.println("New Source:"+ source);
+			if(xmlfile.exists())
+			{
+			Subfolderxmlappend.mainxmlsub();
+			}
+			else
+			{
+				//String s = source.toString();
+				//File fi = new File(s);
+				//String[] files = fi.list();
+				 XMLCr.mainxml();
+			}
+		}
+		else
+		{
+			System.out.println("File Count not breached to Maximum File limit ,No need to create new directory ");
+		}
 if(filecount == 0)
 		{
 			System.err.println("Cant create or update XML as directory is null");
