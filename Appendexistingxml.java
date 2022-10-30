@@ -11,7 +11,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.*;
 import javax.xml.transform.stream.*;
 
-public class Appendtry {
+public class Appendexistingxml {
 
 public static void main(String[] args)
 {
