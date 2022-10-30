@@ -82,3 +82,25 @@ System.out.println(ex);
 	       return length;
 	 }
 }
+//logic for call
+if(filecount == 0)
+		{
+			System.err.println("Cant create or update XML as directory is null");
+		}
+		else
+		{
+			String s = source.toString();
+			File fi = new File(s);
+			String[] files = fi.list();
+			
+			File temp = new File(s+ "\\site.xml");
+			if(temp.exists())
+			{
+				Testone.updatexmlmain();
+				System.out.println("updated for"+files);
+			}
+			else {
+				
+				createxml(files,s); 
+			System.out.println("Created/Updated XML for: "+files.length +" files");
+			}
