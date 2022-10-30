@@ -104,3 +104,32 @@ if(filecount == 0)
 				createxml(files,s); 
 			System.out.println("Created/Updated XML for: "+files.length +" files");
 			}
+		}
+		
+	
+
+		String s = source.toString();
+		String path;
+		for(int i=1;i<subfolderc;i++)
+		{
+			
+			path = s +"_"+i;
+			File fi = new File(path);
+			String[] files = fi.list();
+			Arrays.sort(files);
+			 File temp = new File(path+ "\\site.xml");
+			//System.out.println("Inside SubFolder:"+path);
+			if(temp.exists())
+			{
+				Testone.updatexmlmain();
+			
+			
+			}
+			else {
+				
+				createxml(files,s); 
+			
+			}	
+			
+			readxml(path);	
+		}
